@@ -17,8 +17,8 @@ const LAUNCHES_QUERY = gql`
 function Launches() {
   const { loading, error, data } = useQuery(LAUNCHES_QUERY);
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error : oops!</p>;
+  if (loading) return <h3>Loading...</h3>;
+  if (error) return `Error! ${error}`;
 
   return (
     <React.Fragment>
